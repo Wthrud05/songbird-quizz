@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/headfoot.css">
+  <link rel="stylesheet" href="../styles/game.css">
+  <link rel="shortcut icon" href="../assets/images/birdFav.svg" type="image/x-icon">
+  <title>SongBird</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="container">
+        <img src="../assets//images/logo.png" alt="logo">
+        <nav>
+          <ul class="menu">
+            <li><a href="./start.html">Main</a></li>
+            <li><a href="#">Quiz</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+
+        <ul class="category-list">
+          <li class="category-item active">Разминка</li>
+          <li class="category-item">Воробьиные</li>
+          <li class="category-item">Лесные птицы</li>
+          <li class="category-item">Певчие птицы</li>
+          <li class="category-item">Хищные птицы</li>
+          <li class="category-item">Морские птицы</li>
+        </ul>
+
+        <div class="player-box">
+          <div class="score-box">
+            Ваш счёт:
+            <span class="score"></span>
+          </div>
+          <img class="bird-img" src="../assets/images/unknownbird.jpg" alt="unknown-bird">
+          <div class="player">
+            <h3 class="bird-name">******</h3>
+            <div class="main-player">
+              <button class="play playable audio">
+                <img class="audio-btn" src="../assets/images/play.svg" alt="play">
+                <audio class="song" src=""></audio>
+              </button>
+              <div class="playline">
+                <div class="line"></div>
+                <div class="time">
+                  <span class="duration">00:00</span>
+                  <span class="full-duraton">00:00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bird-info-box">
+          <div class="answers">
+            <ul class="answer-list">
+              <li class="answer-item"></li>
+              <li class="answer-item"></li>
+              <li class="answer-item"></li>
+              <li class="answer-item"></li>
+              <li class="answer-item"></li>
+              <li class="answer-item"></li>
+            </ul>
+          </div>
+
+          <div class="bird-info">
+            <div id="start-info">
+              <p>Послушайте плеер</p>
+              <p>Выберите птицу из списка</p>
+            </div>
+
+            <div class="current-bird-info">
+              <img id="bird-img" src="" />
+              <div class="current-bird-desc">
+                <h2></h2>
+                <p></p>
+                <div class="current-bird-play">
+                  <button class="current-play audio">
+                    <img class="current-audio-btn" src="../assets/images/play.svg" alt="play">
+                    <audio class="current-audio" src=""></audio>
+                  </button>
+                  <div class="current-playline">
+                    <div class="current-line"></div>
+                    <div class="current-time">
+                      <span class="current-duration">00:00</span>
+                      <span class="current-full-duraton">00:00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <p class="bird-desc"></p>
+            </div>
+          </div>
+        </div>
+
+        <button disabled class="next-level">Next Level
+        </button>
+        <a class="res-link" href="./result.html">Next Level</a>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <span>Alxander Lobykin 2022</span>
+        <a class="github" href="https://github.com/Wthrud05" target="_blank"><img class="github-img"
+            src="../assets/images/github.png" alt="github">GitHub</a>
+      </div>
+    </footer>
+  </div>
+  <script src="../scripts/data.js"></script>
+  <script src="../scripts/game.js"></script>
+</body>
+
+</html>

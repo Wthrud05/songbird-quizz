@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  background: rgb(255, 255, 255);
+  font-family: 'Irish Grover', cursive;
+  height: 100%;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.wrapper {
+  margin: 0 auto;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
+}
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+main {
+  transition: box-shadow .3s;
+}
+main .container {
+  min-height: calc(100vh - 160px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px 0;
+  padding: 20px;
+}
+.category-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #DCD9D4;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), radial-gradient(at 50% 0%, rgba(255,255,255,0.10) 0%, rgba(0,0,0,0.50) 50%);
+  background-blend-mode: soft-light,screen;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+  height: 40px;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.category-item {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  border-right: 1px solid rgba(94, 94, 94, 0.5);
+}
+.category-item:last-child {
+  border-right: 0;
+}
+.player-box {
+  background-color: #DCD9D4;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), radial-gradient(at 50% 0%, rgba(255,255,255,0.10) 0%, rgba(0,0,0,0.50) 50%);
+  background-blend-mode: soft-light,screen;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+  padding: 10px;
+  display: flex;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.player-box > img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  margin-right: 30px;
+}
+.player {
+  width: 100%;
+  color: #000;
+}
+.player h3 {
+  letter-spacing: 2px;
+  border-bottom: 3px solid rgba(94, 94, 94, 0.5);
+}
+.bird-info-box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.answers {
+  background-color: #DCD9D4;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), radial-gradient(at 50% 0%, rgba(255,255,255,0.10) 0%, rgba(0,0,0,0.50) 50%);
+  background-blend-mode: soft-light,screen;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+  width: 50%;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+.answer-list {
+  border-radius: 5px;
+  position: relative;
+}
+.answer-item {
+  padding: 20px 30px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(94, 94, 94, 0.5);
+  transition: all 0.2s;
+  position: relative;
+}
+.answer-item:first-child {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.answer-item:last-child {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom: none;
+}
+.answer-item:hover {
+  background-color: rgb(95, 95, 95);
+  color: #fff;
+}
+.bird-info {
+  background-color: #DCD9D4;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), radial-gradient(at 50% 0%, rgba(255,255,255,0.10) 0%, rgba(0,0,0,0.50) 50%);
+  background-blend-mode: soft-light,screen;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+  width: 50%;
+  border-radius: 5px;
+  padding: 10px;
+}
+.next-level {
+  background-color: #DCD9D4;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), radial-gradient(at 50% 0%, rgba(255,255,255,0.10) 0%, rgba(0,0,0,0.50) 50%);
+  background-blend-mode: soft-light,screen;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+  width: 100%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-family:  'Irish Grover', cursive;
+  color: #000;
+  border: 3px solid rgb(165, 165, 165);
+  pointer-events: none;
+}
+.unlock {
+  background-color: rgb(142, 232, 142);
+  border: 3px solid rgb(19, 186, 19);
+  pointer-events: unset;
+}
+.next-level a {
+  pointer-events: none;
+}
+.active {
+  background-image: linear-gradient(to right, #868f96 0%, #596164 100%);
+  color: #fff;
+}
+.play {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.play img {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.current-bird-info {
+  display: flex;
+  margin-bottom: 10px;
+  display: none;
+}
+.current-bird-desc {
+  width: 100%;
+}
+#bird-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+  margin-right: 15px;
+  pointer-events: none;
+}
+.current-bird-desc h2 {
+  font-size: 20px;
+  border-bottom: 1px solid rgba(94, 94, 94, 0.8);
+  padding: 5px 0;
+}
+.current-bird-desc p {
+  font-size: 16px;
+  border-bottom: 1px solid rgba(94, 94, 94, 0.8);
+  padding: 5px 0;
+}
+.current-bird-play {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(255,255,255,0.3);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, .3);
+  padding: 10px;
+  border-radius: 25px;
+}
+.green {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: green;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translate(0, -50%);
+}
+.red {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: red;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translate(0, -50%);
+}
+.score-box {
+  position: absolute;
+  right: 20px;
+  bottom: 0px;
+  font-size: 24px;
+}
+.score {
+  font-size: 32px;
+}
+.audio {
+  width: 45px;
+  height: 45px;
+  background: transparent;
+  border: none;
+  outline: none;
+  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  cursor: pointer;
+  z-index: 10;
+  transition: all .3s;
+}
+.audio:hover {
+  box-shadow: 0px 0px 15px rgba(94, 94, 94, 0.8);
+}
+.audio img {
+  width: 25px;
+  height: 25px;
+  z-index: 1;
+  pointer-events: none;
+}
+.main-player {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(255,255,255,0.3);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, .3);
+  padding: 10px;
+  border-radius: 25px;
+}
+.playline {
+  height: 10px;
+  width: calc(100% - 40px);
+  background:rgba(94, 94, 94, 0.3);
+  cursor: pointer;
+  border-radius: 20px;
+}
+.line {
+  height: 10px;
+  background-image: linear-gradient(to right, #a8caba 0%, #5d4157 100%);
+  width: 0%;
+  border-radius: 20px;
+}
+.time {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+.current-playline {
+  height: 10px;
+  width: calc(100% - 40px);
+  background:rgba(94, 94, 94, 0.3);
+  cursor: pointer;
+  border-radius: 20px;
+}
+.current-line {
+  height: 10px;
+  background-image: linear-gradient(to right, #a8caba 0%, #5d4157 100%);
+  width: 0%;
+  border-radius: 20px;
+}
+.current-time {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+.res-link {
+  background-color: #DCD9D4;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), radial-gradient(at 50% 0%, rgba(255,255,255,0.10) 0%, rgba(0,0,0,0.50) 50%);
+  background-blend-mode: soft-light,screen;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+  width: 100%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-family:  'Irish Grover', cursive;
+  color: #000;
+  border: 3px solid rgb(165, 165, 165);
+  pointer-events: none;
+  text-decoration: none;
+  text-align: center;
+  display: none;
+}
+.unlock-link {
+  background-color: rgb(142, 232, 142);
+  border: 3px solid rgb(19, 186, 19);
+  pointer-events: unset;
+}
+.right {
+  box-shadow: inset 0px 0px 50px green;
+  z-index: 1000;
+}
+.wrong {
+  box-shadow: inset 0px 0px 50px red;
+}
+
+@media (max-width: 480px) {
+  main .container h1 {
+    font-size: 32px;
+  }
+  .footer .container > img {
+    width: 80px;
+  }
+}
+
+
+@media (max-width: 780px) {
+  .category-list {
+    font-size: 12px;
+  }
+  .player-box > img {
+    width: 150px;
+    height: 150px;
+  }
+  .bird-info-box {
+    flex-direction: column;
+    align-items: center;
+  }
+  .answers {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .bird-info {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  main .container h1 {
+    font-size: 32px;
+  }
+  .category-list {
+    flex-direction: column;
+    height: 100%;
+  }
+  .player-box > img {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+  }
+  .audio img {
+    width: 15px;
+    height: 15px;
+  }
+  .audio {
+    width: 30px;
+    height: 30px;
+  }
+  .playline {
+    height: 8px;
+  }
+  .line {
+    height: 8px;
+  }
+  .main-player {
+    margin-bottom: 30px;
+  }
+  .score-box,
+  .score {
+    font-size: 20px;
+  }
+  .time {
+    font-size: 10px;
+  }
+  .current-bird-desc h2 {
+    font-size: 16px;
+  }
+  .current-bird-desc p {
+    font-size: 14px;
+  }
+  .current-time {
+    font-size: 10px;
+  }
+  #bird-img {
+    width: 100px;
+    height: 100px;
+}
+  .footer .container > img {
+    width: 80px;
+  }
+}
+
+@media (max-width: 360px) {
+  main .container h1 {
+    font-size: 28px;
+  }
+}
